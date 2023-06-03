@@ -5,17 +5,179 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agência Digital</title>
-  <link rel="stylesheet" href="index.css">
-  <script src="script.js"></script>
+  <style>
+    /* Estilos CSS */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+    }
+
+    .menu li {
+      margin-left: 10px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section.dark {
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .servico {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .servico i {
+      margin-right: 10px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      text-align: center;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .footer-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .footer-menu li {
+      margin: 0 10px;
+    }
+
+    .footer-menu li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .social-media a {
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #000;
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <nav>
-      <ul>
+      <div class="logo">
+        <h1>Agência Digital</h1>
+      </div>
+      <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -23,49 +185,98 @@
 
   <main>
     <section id="home">
-      <h1>Bem-vindo à Agência Digital</h1>
-      <p>Somos especializados em desenvolvimento web e marketing digital.</p>
+      <h2>Bem-vindo à Agência Digital</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod, ipsum ac fermentum accumsan,
+        ligula lectus rhoncus nisi, ac condimentum massa nisi vel orci. Suspendisse ut dictum eros. Vestibulum ante
+        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam tristique dolor id enim
+        lobortis hendrerit.</p>
+      <a href="#contato" class="btn">Entre em Contato</a>
     </section>
 
-    <section id="servicos">
+    <section id="servicos" class="dark">
       <h2>Nossos Serviços</h2>
-      <ul>
-        <li>Desenvolvimento de websites</li>
-        <li>Otimização de mecanismos de pesquisa (SEO)</li>
-        <li>Marketing de mídia social</li>
-        <li>Publicidade online</li>
-      </ul>
+      <div class="servico">
+        <i class="fas fa-laptop-code"></i>
+        <p>Desenvolvimento Web</p>
+      </div>
+      <div class="servico">
+        <i class="fas fa-mobile-alt"></i>
+        <p>Design Responsivo</p>
+      </div>
+      <div class="servico">
+        <i class="fas fa-chart-line"></i>
+        <p>Marketing Digital</p>
+      </div>
     </section>
 
     <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="gallery">
-        <img src="image1.jpg" alt="Imagem 1">
-        <img src="image2.jpg" alt="Imagem 2">
-        <img src="image3.jpg" alt="Imagem 3">
+      <h2>Portfólio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="img/portfolio1.jpg" alt="Projeto 1">
+          <h3>Projeto 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="img/portfolio2.jpg" alt="Projeto 2">
+          <h3>Projeto 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="img/portfolio3.jpg" alt="Projeto 3">
+          <h3>Projeto 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
       </div>
     </section>
 
     <section id="contato">
       <h2>Entre em Contato</h2>
-      <form>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-
-        <label for="message">Mensagem:</label>
-        <textarea id="message" name="message"></textarea>
-
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" name="name" placeholder="Nome">
+        <input type="email" id="email" name="email" placeholder="Email">
+        <textarea id="message" name="message" placeholder="Mensagem"></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2023 Agência Digital. Todos os direitos reservados.</p>
+    <div class="content">
+      <div class="footer-logo">
+        <h1>Agência Digital</h1>
+      </div>
+      <ul class="footer-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <p>Todos os direitos reservados &copy; Agência Digital</p>
   </footer>
+
+  <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
+  <script>
+    // Validação do formulário de contato
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      if (name === '' || email === '' || message === '') {
+        alert('Por favor, preencha todos os campos do formulário.');
+        return false;
+      }
+
+      return true;
+    }
+  </script>
 </body>
 
 </html>
